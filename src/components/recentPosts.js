@@ -4,7 +4,7 @@ class RecentPosts extends Component {
 render() {
     return (
         <div className="recent-posts">
-            <div classname="recent-posts__wrapper">
+            <div className="recent-posts__wrapper">
                 <div className="recent-posts__heading">Recent Posts</div>
                 <ul className="recent-posts__posts">
                     <li>recent post 0</li>
