@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import AnimateHeight from 'react-animate-height';
+import AnimateHeight from 'react-animate-height';
 
 class Post extends Component {
 

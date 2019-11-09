@@ -13,6 +13,7 @@ const createStoreWithMiddleware = applyMiddleware(thunk)(compose((window.devTool
 import 'bootstrap/dist/css/bootstrap.css';
 import './style/main.scss';
 
+import Results from './components/results';
 import Home from './components/home';
 
 function main() {
@@ -21,7 +22,7 @@ function main() {
       <BrowserRouter>
         <Switch>
           <Route path='/'  exact component = {Home} />
-          <Route path=  '/results' component = {Home}/>
+          <Route path=  '/results' component = {Results}/>
         </Switch>
       </BrowserRouter>
     </Provider>

@@ -31,4 +31,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, actions)(ResultsPosts);
+export default connect(mapStateToProps)(ResultsPosts);
