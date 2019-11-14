@@ -10,6 +10,7 @@ import * as actions from '../actions';
 class Home extends Component {
 
   handleSearchBarSubmit(query) {
+    console.log(query, "here from handleSearchBarSubmit in Home")
     this.props.fetchPostsWithQuery(query, () => {
     this.props.history.push('/results');
     });
@@ -18,7 +19,8 @@ class Home extends Component {
     return (
       <div className ="home">
           <Logo/>
-          <SearchBar page="home" onSubmit={(query) =>  this.handleSearchBarSubmit(query)}/>
+          <SearchBar page="home" onSubmit={(query) => 
+            this.handleSearchBarSubmit(query)}/>
           <RecentPosts/>
       </div>
     );

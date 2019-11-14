@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 class SearchBar extends Component {
 
     handleFormSubmit = function({query}) {
+        console.log(query, " got here from handleFormSubmit in SearchBar")
         this.props.onSubmit(query);
     }
 
@@ -14,10 +15,12 @@ class SearchBar extends Component {
     }
 
     render() {
+
         const { handleSubmit } = this.props;
 
         return (
-            <form className={`search-bar search-bar__${this.props.page}`} onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+            <form className={`search-bar search-bar__${this.props.page}`} 
+            onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                 <div className="search-bar__wrapper">
                     <Field name="query" component={this.renderInput}/>
                     <p>Press return to search</p>
